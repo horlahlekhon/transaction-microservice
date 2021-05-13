@@ -1,0 +1,10 @@
+[
+  {
+    "name": "client_1",
+    "webhook_url": "https://google.com"
+  },
+   {
+    "name": "client_2",
+    "webhook_url": "https://google.com"
+  }
+]
