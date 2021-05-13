@@ -17,6 +17,3 @@ class Command(BaseCommand):
                                           api_key=binascii.hexlify(os.urandom(24)).decode(encoding="utf-8"),
                                           **d) for index, d in enumerate(data)]
             print(f"seeded : {len(var)} of clients")
-            # Clients.objects.create(id=1,name="client_1", api_key=binascii.hexlify(os.urandom(24)).decode(encoding="utf-8"), webhook_url="google.com")
-            # Clients.objects.create(id=2,name="client_2", api_key=binascii.hexlify(os.urandom(24)).decode(encoding="utf-8"), webhook_url="google.com")
-            # Clients.objects.create(id=3,name="client_3", api_key=binascii.hexlify(os.urandom(24)).decode(encoding="utf-8"), webhook_url="google.com")
