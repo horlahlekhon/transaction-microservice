@@ -1,3 +1,8 @@
+Test question:
+https://www.notion.so/Patricia-s-Senior-Python-Developer-s-Test-29c7b6fed4474ac5ba7466c07642515d
+
+
+
 ## To run
 Assuming there is python >= 3.8, pip, virtualenv, sqlite3 and Make installed on the machine where code will be run.
 
