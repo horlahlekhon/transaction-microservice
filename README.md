@@ -3,10 +3,12 @@
 ### pull project 
 
 `git clone git@github.com:horlahlekhon/transaction-microservice.git`
+
 `cd transaction-microservice`
 
 #### Create virtual env and activate it
 `virtualenv --python python3`
+
 `source bin/activate`
 
 #### Run migration
@@ -18,6 +20,7 @@
 ### Seed db with client data
 I provided a json file on the root of the folder `clients.json` clients should be registered there and a valid webhook url that 
 accepts post request of the shape 
+
 ```json
 {
   "transaction_reference": "ref",
@@ -29,10 +32,12 @@ instructions were not given on what to do if webhook fails. after correct client
 `make seed` to create database entry for the data.
 
 ### Run server
+
 `make run`
 
 #### make request
 Request in the shape 
+
 ```json
 {
     "transaction_reference": "ref",
