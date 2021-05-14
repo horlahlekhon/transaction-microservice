@@ -57,5 +57,18 @@ on the other hand, if the request failed, we don't cache it.
 
 the cache uses the standard HTTP cache-control policy to disable the cache so passing  `Cache-Control: No-Cache`, will make each request avoid the cache, but we wont still have duplicate transactions.
 
+request are secured using client's api-key. check the database for an api key and add to header `x-api-key`
+an example request will be.
+
+```
+curl --location --request POST '0.0.0.0:8000/microservice/' \
+--header 'x-api-key: 18f22b543b3b9c8a1c9b8b23f4d71d637c18e59080e89b2f' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "transaction_reference": "ref",
+    "price": 234.10,
+    "status": "successful"
+}'
+```
 
 The database is sqlite and data can be viewed by running sqlite command from cli or gui.
