@@ -1,4 +1,5 @@
 ## To run
+Assuming there is python >= 3.8, pip, virtualenv and Make installed on the machine where code will be run.
 
 ### pull project 
 
