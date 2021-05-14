@@ -7,6 +7,8 @@ Assuming there is python >= 3.8, pip, virtualenv, sqlite3 and Make installed on 
 
 `cd transaction-microservice`
 
+`git checkout master`
+
 #### Create virtual env and activate it
 `virtualenv --python python3 .`
 
