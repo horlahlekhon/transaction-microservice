@@ -7,7 +7,7 @@
 `cd transaction-microservice`
 
 #### Create virtual env and activate it
-`virtualenv --python python3`
+`virtualenv --python python3 .`
 
 `source bin/activate`
 
