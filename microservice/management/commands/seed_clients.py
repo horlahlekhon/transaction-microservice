@@ -13,7 +13,6 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         with open("clients.json", 'r') as clients:
             data = json.loads(clients.read())
-            var = [Clients.objects.create(id=index +1,
-                                          api_key=binascii.hexlify(os.urandom(24)).decode(encoding="utf-8"),
+            var = [Clients.objects.create(api_key=binascii.hexlify(os.urandom(24)).decode(encoding="utf-8"),
                                           **d) for index, d in enumerate(data)]
             print(f"seeded : {len(var)} of clients")

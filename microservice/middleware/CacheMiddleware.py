@@ -23,9 +23,8 @@ class CacheMiddleware(MiddlewareMixin):
             body_hash = self.digest(body)
             cachee = cache.get(body_hash)
             if cachee:
-                print("already cached")
+                print("Serving cached response because request is a duplicate..")
                 return cachee
-            print("new request moving to view")
         else:
             print(f"caching seems to be disabled: {cache_ctrl}")
 

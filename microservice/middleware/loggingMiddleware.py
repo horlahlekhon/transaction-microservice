@@ -1,7 +1,6 @@
 import json
 import logging
 from collections import ItemsView
-from pprint import pprint
 
 from django.utils.deprecation import MiddlewareMixin
 
@@ -33,7 +32,6 @@ class RequestLoggingMiddleware(MiddlewareMixin):
             path = request.META.get("PATH_INFO")
             c_type = request.META.get("CONTENT_TYPE")
             c_len  = request.META.get("CONTENT_LENGTH")
-            print(f"{meta}\n{method}\n{c_type}\n{c_len}\n{body}")
             RequestLogs.objects.create(ip=ip, method=method, content_type=c_type,
                                        content_length=c_len, request_body=body,
                                        request_headers=meta, path=path, response_body=response.data)
